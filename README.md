@@ -7,3 +7,8 @@
 ```
 git submodule add https://github.com/anbang/axis.git themes/axis --depth=1
 ```
+
+```
+From the root of themes/axis/exampleSite:
+hugo server --themesDir ../..
+```

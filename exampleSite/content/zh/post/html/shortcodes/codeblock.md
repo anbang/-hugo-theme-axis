@@ -3,7 +3,6 @@ title: "Code"
 date: 2020-10-20T19:19:37+09:00
 draft: false
 weight: 4
-enableToc: false
 ---
 
 code / codes => 选项卡式代码块。缩进很重要。

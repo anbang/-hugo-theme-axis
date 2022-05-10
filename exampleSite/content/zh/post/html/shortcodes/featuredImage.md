@@ -3,7 +3,6 @@ title: "Featured Image"
 date: 2020-10-21T08:32:40+09:00
 draft: false
 weight: 9
-enableToc: false
 image: "images/mountain.jpg"
 ---
 

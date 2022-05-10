@@ -3,7 +3,6 @@ title: "Alert"
 date: 2020-10-20T18:52:04+09:00
 draft: false
 weight: 1
-enableToc: false
 ---
 
 警报是一个彩色文本框。

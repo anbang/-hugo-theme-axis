@@ -3,7 +3,6 @@ title: "Box"
 date: 2020-10-20T19:10:25+09:00
 draft: false
 weight: 2
-enableToc: false
 ---
 
 ## 1. How to use

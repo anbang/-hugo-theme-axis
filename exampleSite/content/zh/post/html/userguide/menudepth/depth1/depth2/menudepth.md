@@ -3,7 +3,6 @@ title: "菜单深度"
 date: 2020-10-21T06:24:22+09:00
 draft: false
 weight: 2
-enableToc: false
 ---
 
 ## 深度文件夹结构

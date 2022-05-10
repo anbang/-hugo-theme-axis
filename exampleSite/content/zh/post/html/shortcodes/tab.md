@@ -3,7 +3,6 @@ title: "Tab"
 date: 2020-1o-20T20:25:40+09:00
 draft: false
 weight: 8
-enableToc: false
 ---
 
 tab / tabs => Tabs make it easy to explore and switch between different views

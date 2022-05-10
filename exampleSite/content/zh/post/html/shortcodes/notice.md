@@ -3,7 +3,6 @@ title: "Notice"
 date: 2020-10-20T19:37:20+09:00
 draft: false
 weight: 7
-enableToc: false
 ---
 
 ## 1. How to use

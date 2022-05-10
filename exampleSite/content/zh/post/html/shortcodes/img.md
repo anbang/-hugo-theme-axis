@@ -3,7 +3,6 @@ title: "Img"
 date: 2020-10-20T19:35:16+09:00
 draft: false
 weight: 6
-enableToc: false
 ---
 
 image with title, caption, alt, width, height
