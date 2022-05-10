@@ -1,0 +1,11 @@
+<div class="mid">
+  {{ if .Site.Params.isNavigation }}
+    {{ partial "main/landing/home-navs.html" . }}
+  {{ else }}
+    <main class="main">
+      {{ partial "main/landing/home-landing.html" . }}
+    </main>
+    <!-- {{ partial "main/landing/home-sections.html" . }} -->
+  {{ end }}
+</div>
+<script src="//at.alicdn.com/t/font_1944264_p1dw02mkgwl.js"></script>

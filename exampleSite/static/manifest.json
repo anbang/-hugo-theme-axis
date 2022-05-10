@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Hugo axihe theme",
+  "short_name": "Hugo axihe theme",
+  "version": "1.0.0",
+  "default_locale": "zh",
+  "description": "Hugo simple documentation theme",
+  "start_url": "https://www.axihe.com/",
+  "icons": [
+    {
+      "src": "favicon/apple-icon.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": "0.75"
+    }
+  ],
+  "theme_color": "#0071bc",
+  "background_color": "#fff",
+  "display": "standalone"
+}

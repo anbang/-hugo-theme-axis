@@ -1,0 +1,54 @@
+logo = true
+logoText = "AXIS"
+logoType = "short" # long, short
+description = "description."
+editBaseURL = "https://github.com/anbang/axis/blob/master/content/en"
+themeOptions = ["light", "dark"]
+
+useFaviconGenerator = true # https://www.favicon-generator.org/
+
+wideViewAsDefault = false
+
+enableWideBlogSwitch = true
+
+# 搜索相关
+enableTocSwitch = true
+enableLandingBackground = true
+enableSearch = true
+enableSearchHighlight = true
+
+# 语言切换
+enableLangChange = false
+
+# 黑夜模式
+enableDarkMode = true
+
+# 面包屑导航
+enableBreadcrumb = true
+enableBlogBreadcrumb = true
+
+# 编辑页面
+# enableEditBtn = true
+
+# 导航仪模式
+isNavigation = false
+
+enableToc = true
+enableMenu = true
+enableNavbar = true
+enableFooter = true
+showPoweredBy = true
+icp = "皖ICP备16025137号-3"
+
+paginateWindow = 1
+taxoPaginate = 13
+taxoGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+
+# github = "https://github.com/anbang"
+twitter = "https://twitter.com/anbang_account"
+bilibili = "https://space.bilibili.com/59312814"
+
+enableComment = false
+[utterances]       # https://utteranc.es/
+  owner = "anbang"              # Your GitHub ID
+  repo = "axis-xxx"               # The repo to store comments

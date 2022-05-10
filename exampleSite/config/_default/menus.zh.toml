@@ -1,0 +1,11 @@
+[[main]]
+  identifier = "HTML"
+  name = "HTML教程"
+  url = "post/html.html"
+  weight = 2
+
+[[main]]
+  identifier = "Blog"
+  name = "博客"
+  url = "blog.html"
+  weight = 3

@@ -1,0 +1,24 @@
+<div class="navbar__icons">
+  {{ partial "navbar/icons/select-lang.html" . }}
+  {{ partial "navbar/icons/light-dark-toggle.html" . }}
+  {{ if .Site.Params.github }}
+  <div class="navbar__icons--icon">
+    <a href="{{ .Site.Params.github }}" title="Github" aria-label="Github" target="_blank" rel="noreferrer">
+    {{ partial "svgs/github.svg" (dict "width" 22 "height" 22) }}
+    </a>
+  </div>
+  {{ end }}
+  {{ if .Site.Params.twitter }}
+  <div class="navbar__icons--icon">
+    <a href="{{ .Site.Params.twitter }}" title="Twitter" aria-label="Twitter" target="_blank" rel="noreferrer">
+    {{ partial "svgs/twitter.svg" (dict "width" 22 "height" 22) }}
+    </a>
+  </div>
+  {{ end }}
+  <!-- <div class="navbar__icons--icon">
+    <a href="{{ .Site.Params.bilibili }}" title="Bilibili" aria-label="Bilibili" target="_blank" rel="noreferrer">
+    {{ partial "svgs/bilibili.svg" (dict "width" 22 "height" 22) }}
+    </a>
+  </div> -->
+</div>
+

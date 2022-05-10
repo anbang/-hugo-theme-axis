@@ -1,0 +1,23 @@
+[toc-label]
+other = "本文目录"
+
+[tooltip-written]
+other = "Written At"
+
+[tooltip-modified]
+other = "Modified At"
+
+[tooltip-reading-time]
+other = "阅读时间"
+
+[summary-dateformat]
+other = "2006年1月2日"
+
+[reading-time]
+other = "分钟阅读"
+
+[single-writtenBy]
+other = "WRITTEN BY"
+
+[edit-this-page]
+other = "编辑这个页面"

@@ -1,0 +1,12 @@
+{{ if $.Param "enableEditBtn" }}
+  {{ $root := .}}
+  {{ with .FirstSection }}
+    {{ $githubUrl := strings.TrimSuffix ".html" ($root.Permalink | relLangURL) }}
+    <a href="{{ .Params.editBaseURL | default ($.Param "editBaseURL") }}{{ $githubUrl }}.md"
+    target="_blank" rel="noreferrer">
+      <button class="editBtn" aria-label="Edit This Page Button">
+        {{ i18n "edit-this-page" | default "EDIT THIS PAGE" }}
+      </button>
+    </a>
+  {{ end }}
+{{ end }}

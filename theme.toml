@@ -1,0 +1,12 @@
+name = "AXIdoc"
+description = "axihe.com theme."
+homepage = "https://www.axihe.com/"
+license = "MIT"
+licenselink = "https://github.com/anbang/axihe-website/blob/main/LICENSE"
+tags = ["accessible", "multilingual", "responsive", "documentation", "search", "simple", "light", "dark", "mobile"]
+features = ["accessible", "multilingual", "responsive", "grid", "sass", "search", "fast"]
+min_version = "0.65.0"
+
+[author]
+  name = "Anbang"
+  homepage = "https://github.com/anbang"

@@ -1,0 +1,91 @@
+<div class="menu">
+  <!-- <h6 class="menu__label">
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ $.Param "Title" }}
+    {{ end }}
+  </h6> -->
+  <ul>
+    {{ $root := . }}
+    {{ range (.Site.GetPage "section" .Type).Pages }}
+      {{ template "render-menu" (dict "ctx" . "root" $root "depth" 0)}}
+    {{ end }}
+  </ul>
+</div>
+
+  <!-- Set uglyurls = true -->
+  <!-- 教程页面 -->
+{{ define "render-menu" }}
+  {{ $root := .root }}
+  {{ $ctx := .ctx }}
+  {{ $depth := .depth }}
+  <!-- 如果是 uglyurls = true -->
+  {{ $currentURL := index (split (path.Join (index (split $root.Permalink ".html") 0) "/aaa") "aaa") 0}}
+  {{ $permalink := index (split (path.Join (index (split $ctx.Permalink ".html") 0) "/aaa") "aaa") 0}}
+  <!-- {{ if $.Site.Uglyurls }}
+  {{ else }}
+  {{ $currentURL := $root.Permalink }}
+  {{ $permalink := $ctx.Permalink }}
+  {{ end }} -->
+  
+  {{ $sectionName1 := index (last 1 (split (delimit (split $permalink "/") "," "") ",")) 0 }}
+  {{ $sectionName2 := index (last 2 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
+
+  {{ $active := in $currentURL $permalink }}
+  {{ $active = or $active (eq $sectionName1 $sectionName2) }}
+  {{ $active = or $active (in $currentURL $sectionName1) }}
+  
+  {{ if $ctx.Params.Collapsible }}
+  <li 
+    class="menu__title--collapse {{ if $active }}active{{ end }}"
+    data-depth="{{ $depth }}" 
+    data-permalink="{{ $permalink }}"
+    data-currentURL="{{ $currentURL }}"
+    data-name1="{{ $sectionName1 }}"
+    data-name2="{{ $sectionName2 }}"
+    data-active="{{ in $currentURL $permalink }}"
+    data-test="{{ index (split $root.Permalink ".html") 0 }}/"
+    >
+    <span class="menu__title--collapse-text">
+      {{ $ctx.Title }}
+    </span>
+    <span class="menu__title--icon {{ if $active }}{{ if eq ($root.Param "languagedir") "rtl" }}downrtl{{ else }}down{{ end }}{{ else }}right{{ end }}">
+      {{ if eq ($root.Param "languagedir") "rtl" }}
+        {{ partial "svgs/arrow-left.svg" (dict "width" 22 "height" 22) }}
+      {{ else }}
+        {{ partial "svgs/arrow-right.svg" (dict "width" 22 "height" 22) }}
+      {{ end }}
+    </span>
+  </li>
+  <ul class="menu__list {{ if $active }}active{{ else if (in $ctx.Permalink (print "/" $sectionName1 "/")) }}{{ end }}" data-data={{ print "/" $sectionName1 "/"}} data-link={{ .root.Permalink }}>
+    {{ range $ctx.Pages.ByWeight }}
+      {{ if .Params.Collapsible }}
+        {{ template "render-menu" (dict "ctx" . "root" $root "depth" (add $depth 1)) }}
+      {{ else }}
+        {{ $PermalinkFormat := index (split (path.Join (index (split .Permalink ".html") 0) "/aaa") "aaa") 0 }}
+        <!-- {{ $lastUrlElement1 := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }} -->
+        {{ $lastUrlElement1 := index (last 1 (split (delimit (split $PermalinkFormat "/") "," "") ",")) 0 }}
+        {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}        
+        <li>
+          <a href="{{ .Permalink }}" 
+          class="menu__title {{ if and (eq $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}"
+          data-depth="{{ $depth }}"
+          data-Permalink="{{ .Permalink }}"
+          data-currentURL="{{ $currentURL }}"
+          data-lastUrlElement1="{{ $lastUrlElement1 }}"
+          data-lastUrlElement2="{{ $lastUrlElement2 }}"
+          >{{ .Title }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  {{ else }}
+  {{ $lastUrlElement1 := index (last 1 (split (delimit (split $ctx.Permalink "/") "," "") ",")) 0 }}
+  {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
+  <li class="{{ if $active }}active{{ end }}">
+    <a href="{{ $ctx.Permalink }}"
+      class="menu__title {{ if $active }}active{{ end }}">{{ $ctx.Title }}</a>
+  </li>
+  {{ end }}
+{{ end }}
