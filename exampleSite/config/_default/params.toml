@@ -48,10 +48,55 @@ taxoGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 twitter = "https://twitter.com/anbang_account"
 bilibili = "https://space.bilibili.com/59312814"
 
+
+
+# iconfont
+iconfont = ''
+
+# wechat
+# wechat = '/favicon/apple-icon.png'
+
+# 底部的链接
+footerleft = "守币"
+footermiddle = "交易所注册"
+footerright = "社交媒体"
+
+[[footerLinkLeft]]
+link = "https://anbang.blog/post/20500428.html"
+text = "只买不卖守币三十年"
+[[footerLinkLeft]]
+link = "https://anbang.blog/post/tianzige.html"
+text = "田字格定投模型"
+[[footerLinkLeft]]
+link = "https://anbang.blog/post/address.html"
+text = "我的冷钱包地址"
+[[footerLinkLeft]]
+link = "https://anbang.blog/post/locked/logs/home.html"
+text = "购买记录的汇总"
+
+# 中间
+[[footerLinkMiddle]]
+link = "https://accounts.binance.com/zh-CN/register?ref=H8NC307U"
+text = "币安 交易所"
+[[footerLinkMiddle]]
+link = "https://ftx.com/referrals#a=55936550"
+text = "FTX 交易所"
+
+[[footerLinkRight]]
+link = "https://twitter.com/anbang_account"
+text = "Twitter"
+[[footerLinkRight]]
+link = "https://www.youtube.com/c/anbang"
+text = "Youtube"
+[[footerLinkRight]]
+link = "https://t.me/anbang_group"
+text = "Telegram Group"
+[[footerLinkRight]]
+link = "mailto:79228807@qq.com"
+text = "My Email (联系我)"
+
+
 enableComment = false
 [utterances]       # https://utteranc.es/
   owner = "anbang"              # Your GitHub ID
   repo = "axis-xxx"               # The repo to store comments
-
-# iconfont
-iconfont = ''

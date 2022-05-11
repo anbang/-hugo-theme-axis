@@ -3,112 +3,62 @@
     <div class="lmr">
       <div class="footer__section--wrapper">
         <div class="footer__section">
-          <div class="footer__section--title">守币</div>
+          <div class="footer__section--title">{{ .Site.Params.footerleft }}</div>
           <ul>
-            <a
-              href="https://anbang.blog/post/20500428.html"
-              class="footer__section--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              只买不卖守币三十年
-            </a>
-
-            <a
-              href="https://anbang.blog/post/tianzige.html"
-              class="footer__section--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              田字格定投模型
-            </a>
-            <a
-              href="https://anbang.blog/post/address.html"
-              class="footer__section--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              我的冷钱包地址
-            </a>
-            <a
-              href="https://anbang.blog/post/locked/logs/home.html"
-              class="footer__section--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              购买记录的汇总
-            </a>
+            {{ range .Site.Params.footerLinkLeft }}
+              <a
+                href="{{ .link }}"
+                class="footer__section--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {{ .text }}
+              </a>
+            {{ end }}
           </ul>
         </div>
 
         <div class="footer__section">
-          <div class="footer__section--title">交易所注册</div>
+          <div class="footer__section--title">{{ .Site.Params.footermiddle }}</div>
           <ul>
-            <a
-              href="https://accounts.binance.com/zh-CN/register?ref=H8NC307U"
-              class="footer__section--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              币安 交易所
-            </a>
-            <a
-              href="https://ftx.com/referrals#a=55936550"
-              class="footer__section--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              FTX 交易所
-            </a>
+            {{ range .Site.Params.footerLinkMiddle }}
+              <a
+                href="{{ .link }}"
+                class="footer__section--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {{ .text }}
+              </a>
+            {{ end }}
           </ul>
         </div>
 
         <div class="footer__section">
-          <div class="footer__section--title">社交媒体</div>
+          <div class="footer__section--title">{{ .Site.Params.footerright }}</div>
           <ul>
-            <a
-              href="https://twitter.com/anbang_account"
-              target="_blank"
-              rel="noreferrer"
-              class="footer__section--link"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://www.youtube.com/c/anbang"
-              target="_blank"
-              rel="noreferrer"
-              class="footer__section--link"
-            >
-              Youtube
-            </a>
-            <a
-              href="https://t.me/anbang_group"
-              target="_blank"
-              rel="noreferrer"
-              class="footer__section--link"
-            >
-              Telegram Group
-            </a>
-            <a
-              href="mailto:79228807@qq.com"
-              target="_blank"
-              rel="noreferrer"
-              class="footer__section--link"
-            >
-              My Email (联系我)
-            </a>
+            {{ range .Site.Params.footerLinkright }}
+              <a
+                href="{{ .link }}"
+                class="footer__section--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {{ .text }}
+              </a>
+            {{ end }}
           </ul>
         </div>
-
+        {{ if .Site.Params.wechat }}
         <div class="footer__section">
           <div class="footer__section--title">关注微信</div>
           <img
             width="128"
             height="128"
-            src="/favicon/apple-icon.png"
+            src="{{ .Site.Params.wechat }}"
           />
         </div>
+        {{ end }}
       </div>
     </div>
   </div>
