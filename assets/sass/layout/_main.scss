@@ -1,6 +1,6 @@
 .mid {
   @include themify($themes) {
-    background-color: themed('back-background-color');
+    background-color: themed("back-background-color");
   }
 }
 .main {
@@ -9,7 +9,7 @@
   @include flexbox();
   @include justify-content(center);
   @include themify($themes) {
-    background-color: themed('back-background-color');
+    background-color: themed("back-background-color");
   }
 }
 .icon {
@@ -18,4 +18,19 @@
   vertical-align: -0.5em;
   fill: currentColor;
   overflow: hidden;
+}
+.center {
+  text-align: center;
+}
+.decline {
+  background-color: #ffe7eb;
+}
+.decline-value {
+  color: #ea3943;
+}
+.increase {
+  background-color: #ebffe7;
+}
+.increase-value {
+  color: #16c784;
 }
