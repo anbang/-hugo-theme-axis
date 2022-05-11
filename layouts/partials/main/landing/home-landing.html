@@ -19,12 +19,12 @@
             {{ end }}
           {{ end }}
             {{ if .spaceBetweenTitleText }}
-              <div style="height: {{ .spaceBetweenTitleText }}px"></div>
+              <div style="height: {{ .spaceBetweenTitleText }}px;"></div>
             {{ end }}
-          {{ if .text }}
-            {{ range .text }}
+          {{ if .subtitle }}
+            {{ range .subtitle }}
               <div class="text" style="{{ with $landing.textColor }}color:{{ . }}{{ end }};">
-                {{ . }}
+                {{ .text }}
               </div>
             {{ end }}
           {{ end }}

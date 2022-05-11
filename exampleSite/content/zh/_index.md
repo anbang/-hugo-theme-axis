@@ -6,7 +6,7 @@ draft: false
 # updatesBanner: "Banner - &nbsp; [Hugo AXIS theme](https://github.com/anbang/axis) &nbsp; just arrived"
 landing:
   height: 450
-  # image: favicon/apple-icon.png
+  image: favicon/apple-icon.png
   title:
     - 只买不卖守币三十年
   text:
@@ -18,11 +18,14 @@ landing:
       color: default
   titleColor:
   textColor:
-  spaceBetweenTitleText: 20
+  spaceBetweenTitleText: 10
   buttons:
     - link: blog.html
       text: 守币日记
       color: primary
+    - link: post/html.html
+      text: 市场数据
+      color: default
     - link: post/html.html
       text: 市场数据
       color: default
