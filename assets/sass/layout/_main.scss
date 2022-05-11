@@ -12,3 +12,10 @@
     background-color: themed('back-background-color');
   }
 }
+.icon {
+  width: 1.6em;
+  height: 1.6em;
+  vertical-align: -0.5em;
+  fill: currentColor;
+  overflow: hidden;
+}

@@ -52,3 +52,6 @@ enableComment = false
 [utterances]       # https://utteranc.es/
   owner = "anbang"              # Your GitHub ID
   repo = "axis-xxx"               # The repo to store comments
+
+# iconfont
+iconfont = ''
