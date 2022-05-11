@@ -40,12 +40,6 @@
   <li 
     class="menu__title--collapse {{ if $active }}active{{ end }}"
     data-depth="{{ $depth }}" 
-    data-permalink="{{ $permalink }}"
-    data-currentURL="{{ $currentURL }}"
-    data-name1="{{ $sectionName1 }}"
-    data-name2="{{ $sectionName2 }}"
-    data-active="{{ in $currentURL $permalink }}"
-    data-test="{{ index (split $root.Permalink ".html") 0 }}/"
     >
     <span class="menu__title--collapse-text">
       {{ $ctx.Title }}
@@ -71,10 +65,6 @@
           <a href="{{ .Permalink }}" 
           class="menu__title {{ if and (eq $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}"
           data-depth="{{ $depth }}"
-          data-Permalink="{{ .Permalink }}"
-          data-currentURL="{{ $currentURL }}"
-          data-lastUrlElement1="{{ $lastUrlElement1 }}"
-          data-lastUrlElement2="{{ $lastUrlElement2 }}"
           >{{ .Title }}</a>
         </li>
       {{ end }}

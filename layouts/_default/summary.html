@@ -34,7 +34,7 @@
   </div>
   <div class="summary-card__links">
     {{ range .Params.tags }}
-      <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}" class="summary-card__tag">
+      <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}.html" class="summary-card__tag">
         {{ . }}
       </a>
     {{ end }}
