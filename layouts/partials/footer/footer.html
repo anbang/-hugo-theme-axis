@@ -1,6 +1,6 @@
 {{ if $.Param "enableFooter" }}
 <div class="bot">
-  {{ partial "axihe/middle-category.html" . }}
+  {{ partial "partials/axihe/middle-category.html" . }}
   <footer class="footer">
     <div class="divider">
       <div class="lmr">
@@ -8,6 +8,9 @@
           {{ with $.Site.Copyright }} 
           {{ replace . "{year}" now.Year | markdownify }} 
           {{ end }}
+          Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer"
+              >zDoc</a
+            >
         </p>
         {{ if $.Param "showPoweredBy" }}
         <p class="caption">
