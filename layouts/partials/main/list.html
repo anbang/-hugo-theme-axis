@@ -17,7 +17,7 @@
     </article>
 
     <section id="list-side" class="{{ if $wideViewAsDefault }}hide{{ else }}r{{ end }}" data-dir="{{ $.context.Param "languagedir" | default "ltr" }}">
-      {{ partial "axihe/edu-right.html" . }}
+      {{ partial "axihe/edu-right.html" .context }}
     </section>
 
   </div>
