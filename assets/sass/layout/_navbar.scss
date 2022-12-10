@@ -2,7 +2,7 @@
   position: relative;
 }
 .navbar {
-  padding: 0 0.75rem;
+  padding: 0;
   height: 100%;
   position: relative;
   
@@ -12,10 +12,10 @@
   &__wrapper {
     width: 100%;
     height: $grid-nav-height;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+    // position: fixed;
+    // left: 0;
+    // right: 0;
+    // top: 0;
     z-index: z('navbar');
     color: inherit;
 

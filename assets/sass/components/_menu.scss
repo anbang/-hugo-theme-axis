@@ -1,11 +1,11 @@
 .menu {
   position: -webkit-sticky;
   position: sticky;
-  top: $grid-nav-height;
+  top: 0;
   padding: 0.5rem;
   margin: 0.5rem;
   margin-top: 0;
-  padding-top: 0.85rem;
+  padding-top: 0;
   // height: calc(100vh - $grid-nav-height);
   max-height: 100vh;
   overflow-y: auto;
