@@ -7,8 +7,10 @@ themeOptions = ["light", "dark"]
 
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
+# 默认宽视图
 wideViewAsDefault = false
 
+# Blog 宽视图
 enableWideBlogSwitch = true
 
 # 搜索相关

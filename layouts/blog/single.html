@@ -1,13 +1,14 @@
 {{ define "main" }}
 {{ $wideViewAsDefault := ($.Param "wideViewAsDefault") }}
+{{ $enableWideBlogSwitch := ($.Param "enableWideBlogSwitch") }}
 <div class="mid">
   <div class="divider">
     
-    <nav id="single-menu" class="{{ if $wideViewAsDefault }}hide{{ else }}l{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
+    <nav id="single-menu" class="{{ if $enableWideBlogSwitch }}hide{{ else }}l{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
       {{ partial "axihe/blog-left.html" . }}
     </nav>
 
-    <article id="list-main" class="{{ if $wideViewAsDefault }}lm{{ else }}m{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
+    <article id="list-main" class="{{ if $enableWideBlogSwitch }}lm{{ else }}m{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
       {{ if $.Param "enableBlogBreadcrumb" }}
         {{ partial "main/component/breadcrumb.html" . }}
       {{ end }}
